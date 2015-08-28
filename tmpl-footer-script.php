@@ -1,5 +1,5 @@
 <script type="text/javascript">
 jQuery(document).ready(function() {
-	jQuery('.<?php echo $class; ?>').fitVids();
+	jQuery('<?php echo $selectors; ?>').fitVids();
 });
 </script>
