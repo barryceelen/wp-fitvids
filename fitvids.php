@@ -29,5 +29,5 @@ if ( ! defined( 'WPINC' ) ) {
 
 if ( ! is_admin() ) {
 	require_once( plugin_dir_path( __FILE__ ) . 'class-fitvids.php' );
-	add_action( 'plugins_loaded', array( 'Fitvids', 'get_instance' ) );
+	add_action( 'init', array( 'Fitvids', 'get_instance' ) );
 }
