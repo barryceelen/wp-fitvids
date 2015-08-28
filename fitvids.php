@@ -12,7 +12,7 @@
  * Plugin Name:       Fitvids
  * Plugin URI:        https://github.com/barryceelen/wp-fitvids
  * Description:       Make videos responsive with the Fitvids jquery plugin
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Barry Ceelen
  * Author URI:        https://github.com/barryceelen/
  * Text Domain:       fitvids
@@ -28,6 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if ( ! is_admin() ) {
-	require_once( plugin_dir_path( __FILE__ ) . 'class-fitvids.php' );
-	add_action( 'init', array( 'Fitvids', 'get_instance' ) );
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/functions.php' );
+	add_action( 'wp_enqueue_scripts', 'wp_fitvids_enqueue_scripts' );
+	add_action( 'wp_footer', 'wp_fitvids_footer_script', 21, 1 );
 }
