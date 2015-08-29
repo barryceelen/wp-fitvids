@@ -30,5 +30,5 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! is_admin() ) {
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/functions.php' );
 	add_action( 'wp_enqueue_scripts', 'wp_fitvids_enqueue_scripts' );
-	add_action( 'wp_footer', 'wp_fitvids_footer_script', 21, 1 );
+	add_action( 'wp_print_footer_scripts', 'wp_fitvids_footer_script' );
 }
