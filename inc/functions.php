@@ -22,9 +22,11 @@ function wp_fitvids_footer_script() {
 	$selectors = implode( ', ', apply_filters( 'plugin_fitvids_selectors', array( '.hentry' ) ) );
 ?>
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('<?php echo $selectors; ?>').fitVids();
-});
+if (window.jQuery) {
+	jQuery(document).ready(function() {
+		jQuery('<?php echo $selectors; ?>').fitVids();
+	});
+}
 </script>
 <?php
 }
